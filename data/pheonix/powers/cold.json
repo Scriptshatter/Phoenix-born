@@ -5,12 +5,12 @@
     "hud_render": {
         "should_render": true,
         "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
-        "bar_index": 9,
+        "bar_index": 8,
         "condition": {
             "type": "origins:resource",
-            "resource": "pheonix:temp",
-            "comparison": "<",
-            "compare_to": 500
+            "resource": "pheonix:heat",
+            "comparison": "==",
+            "compare_to": 0
         }
     }
 }

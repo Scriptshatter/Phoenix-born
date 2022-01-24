@@ -1,7 +1,10 @@
 {
 	"powers": [
 		"pheonix:nofire",
-		"pheonix:water"
+		"pheonix:water",
+		"pheonix:temp",
+		"pheonix:heat",
+		"pheonix:cold"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
