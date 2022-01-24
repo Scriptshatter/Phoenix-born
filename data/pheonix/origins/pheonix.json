@@ -2,7 +2,7 @@
 	"powers": [
 		"pheonix:nofire",
 		"pheonix:water",
-		"pheonix:temp",
+		"pheonix:link",
 		"pheonix:heat",
 		"pheonix:cold"
 	],

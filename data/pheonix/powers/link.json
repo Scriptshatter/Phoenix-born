@@ -15,16 +15,27 @@
                             "compare_to": 0
                         },
                         {
-                            "type":
+                            "type": "biome",
+                            "condition": {
+                                "type": "origins:tempiture",
+                                "comparison": ">=",
+                                "compare_to": 2
+                            }
                         }
                     ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:cold",
+                    "change": -5
                 }
             }
         ]
 
         
     },
-    "interval": 20,
+    "interval": 1,
     "name": "Natural habitat",
     "decription": "Natrally, your body needs heat, but in colder areas it starts to diminish."
 }
