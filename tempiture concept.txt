@@ -1,0 +1,15 @@
+(1500) 1000 F = speed 2 + haste 2 + stranth 2 + Regen 1
+
+(1250 - 1499) 750 - 999 F = speed 1 + haste 1 + stranth 1
+
+(750 - 1249) 250 - 749 F = Normal
+
+(600 - 749) 100 - 249 F = slowness 1 + mining f. 1 + weakness 1
+
+(500 - 599) 0 - 99 F = slowness 2 + mining f. 2 + weakness 2
+
+(250 - 599) -250 - -1 F = slowness 3 + mining f. 3 + weakness 3 + wither 2
+
+(1 - 249) -499 - -251 F = slowness 4 + mining f. 4 + weakness 4 + rapid health drain
+
+(0) -500 F = instant death (even in creative)
