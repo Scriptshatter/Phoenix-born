@@ -6,7 +6,8 @@
 		"pheonix:heatlink",
 		"pheonix:heat",
 		"pheonix:cold",
-		"pheonix:hippityhoppity"
+		"pheonix:hippityhoppity",
+		"pheonix:launch"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
