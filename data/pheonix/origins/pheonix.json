@@ -11,7 +11,8 @@
 		"pheonix:falling_with_style",
 		"pheonix:tempstats",
 		"pheonix:lavasee",
-		"pheonix:dontdie"
+		"pheonix:dontdie",
+		"pheonix:firepunch"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,

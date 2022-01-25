@@ -1,0 +1,46 @@
+{
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.secondary_active"
+        }
+    },
+    "invisibility": {
+        "type": "origins:action_on_hit",
+        "condition": {
+            "type": "origins:and",
+            "conditions":[
+            {"type": "origins:power_active",
+            "power": "pheonix:firepunch_toggle"},
+            {"type": "origins:resource",
+                "resource": "pheonix:heat",
+                "comparison": ">",
+                "compare_to": 25}
+            ]
+        },
+        "bientity_action":{
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:set_on_fire",
+                        "duration": 15
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": -25
+                }
+                }
+            ]
+        }
+        
+    }
+
+}
