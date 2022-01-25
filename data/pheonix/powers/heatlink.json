@@ -29,7 +29,31 @@
                     "change": 20
                 }
             },
-            
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:water",
+                            "comparison": "!=",
+                            "compare_to": 0
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -20
+                }
+            },
             {
                 "condition": {
                     "type":"origins:and",
@@ -110,6 +134,412 @@
                     "resource": "pheonix:heat",
                     "change": 1
                 }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.95
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -1
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.9
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -1
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.8
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -2
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.7
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -3
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.6
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -3
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.5
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -5
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.3
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -5
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.25
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -5
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.2
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -6
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0.05
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -7
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": 0
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -7
+                }
+                
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": -0.2
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -8
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": -0.3
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -9
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": -0.5
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -10
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "==",
+                                "compare_to": -0.7
+                            }
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -12
+                }
             }
             
         ]
@@ -117,5 +547,5 @@
         
     },
     "interval": 5,
-    "hidden" : true
+    "hidden": true
 }
