@@ -19,6 +19,28 @@
                             "fluid": "minecraft:lava",
                             "comparison": "!=",
                             "compare_to": 0
+                        },
+                        {
+                            "type": "origins:block_in_radius",
+                            "block_condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:block",
+                                        "block": "minecraft:lava"
+                                    },
+                                    {      
+                                        "type": "origins:fluid",
+                                        "fluid_condition": {
+                                            "type": "origins:still"
+                                        }
+                                    }
+                                ]
+                            },
+                            "radius": 1,
+                            "shape": "cube",
+                            "comparison": ">=",
+                            "compare_to": 6
                         }
                     ]
                     
@@ -27,6 +49,31 @@
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
                     "change": 20
+                }
+            },
+            {
+                "condition": {
+                    "type":"origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:lava",
+                            "comparison": "!=",
+                            "compare_to": 0
+                        }
+                    ]
+                    
+                },
+                "action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": 5
                 }
             },
             {
@@ -150,33 +197,6 @@
                             "condition": {
                                 "type": "origins:temperature",
                                 "comparison": "==",
-                                "compare_to": 0.95
-                            }
-                        }
-                    ]
-                    
-                },
-                "action":{
-                    "type": "origins:change_resource",
-                    "resource": "pheonix:heat",
-                    "change": -1
-                }
-            },
-            {
-                "condition": {
-                    "type":"origins:and",
-                    "conditions": [
-                        {
-                            "type": "origins:resource",
-                            "resource": "pheonix:cold",
-                            "comparison": "==",
-                            "compare_to": 0
-                        },
-                        {
-                            "type": "origins:biome",
-                            "condition": {
-                                "type": "origins:temperature",
-                                "comparison": "==",
                                 "compare_to": 0.9
                             }
                         }
@@ -213,7 +233,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -2
+                    "change": -1
                 }
             },
             {
@@ -240,7 +260,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -3
+                    "change": -1
                 }
             },
             {
@@ -267,7 +287,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -3
+                    "change": -1
                 }
             },
             {
@@ -294,7 +314,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -5
+                    "change": -2
                 }
             },
             {
@@ -321,7 +341,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -5
+                    "change": -2
                 }
             },
             {
@@ -348,7 +368,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -5
+                    "change": -2
                 }
             },
             {
@@ -375,7 +395,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -6
+                    "change": -3
                 }
             },
             {
@@ -402,7 +422,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -7
+                    "change": -4
                 }
             },
             {
@@ -429,7 +449,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -7
+                    "change": -4
                 }
                 
             },
@@ -457,7 +477,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -8
+                    "change": -4
                 }
             },
             {
@@ -484,7 +504,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -9
+                    "change": -4
                 }
             },
             {
@@ -511,7 +531,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -10
+                    "change": -5
                 }
             },
             {

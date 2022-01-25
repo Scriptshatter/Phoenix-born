@@ -1,0 +1,17 @@
+{
+	"type": "origins:action_over_time",
+  	"entity_action": {
+        "type": "origins:and",
+        "actions":[
+    	{"type": "origins:execute_command",
+    	"command": "execute as @e[type=minecraft:piglin, distance=..32] run data modify entity @s Brain.memories.\"minecraft:angry_at\".value set from entity @p UUID",
+    	"permission_level": 4},
+        {"type": "origins:execute_command",
+            "command": "execute as @p at @s run data modify entity @e[type=minecraft:zombified_piglin,limit=1,sort=random,distance=..64] AngryAt set from entity @s UUID",
+            "permission_level": 4}
+        ]
+  	},
+  	"interval": 20,
+	"name": "they hate you",
+	"description": "why do all piglins hate you? balence reasons."
+}
