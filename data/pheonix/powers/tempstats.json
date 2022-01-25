@@ -1,0 +1,355 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions":[
+            {
+                "condition": {
+                    "type": "origins:resource",
+                    "resource": "pheonix:heat",
+                    "comparison": "==",
+                    "compare_to": 750
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "haste",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "regeneration",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions":[
+                    {"type": "origins:resource",
+                    "resource": "pheonix:heat",
+                    "comparison": "<",
+                    "compare_to": 750},
+                    {
+                        "type": "origins:resource",
+                    "resource": "pheonix:heat",
+                    "comparison": ">=",
+                    "compare_to": 500
+                    }
+                    ]
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "haste",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions":[
+                    {"type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": "<",
+                    "compare_to": 150},
+                    {
+                        "type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": ">=",
+                    "compare_to": 1
+                    }
+                    ]
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "mining_fatigue",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions":[
+                    {"type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": "<",
+                    "compare_to": 250},
+                    {
+                        "type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": ">=",
+                    "compare_to": 150
+                    }
+                    ]
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "mining_fatigue",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions":[
+                    {"type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": "<",
+                    "compare_to": 600},
+                    {
+                        "type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": ">=",
+                    "compare_to": 250
+                    }
+                    ]
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 2,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "mining_fatigue",
+                            "duration": 100,
+                            "amplifier": 2,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 2,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "wither",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions":[
+                    {"type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": "<",
+                    "compare_to": 750},
+                    {
+                        "type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": ">=",
+                    "compare_to": 600
+                    }
+                    ]
+                },
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 3,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "mining_fatigue",
+                            "duration": 100,
+                            "amplifier": 3,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 3,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "wither",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    
+                    "type": "origins:resource",
+                    "resource": "pheonix:cold",
+                    "comparison": "==",
+                    "compare_to": 750},
+    
+                "action": {
+                    "type": "apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 4,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "mining_fatigue",
+                            "duration": 100,
+                            "amplifier": 4,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 4,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "wither",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        },
+                        {
+                            "effect": "instant_damage",
+                            "duration": 1,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon":false
+                        }
+                    ]
+                }
+            }
+            
+        ]
+    },
+    "interval": 20
+}
