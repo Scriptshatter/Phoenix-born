@@ -8,7 +8,8 @@
 		"pheonix:cold",
 		"pheonix:hippityhoppity",
 		"pheonix:launch",
-		"pheonix:falling_with_style"
+		"pheonix:falling_with_style",
+		"pheonix:tempstats"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,

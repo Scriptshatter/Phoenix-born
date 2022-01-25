@@ -11,7 +11,7 @@
                     "compare_to": 750
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "speed",
@@ -65,7 +65,7 @@
                     ]
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "speed",
@@ -111,7 +111,7 @@
                     ]
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "slowness",
@@ -157,7 +157,7 @@
                     ]
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "slowness",
@@ -203,7 +203,7 @@
                     ]
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "slowness",
@@ -257,7 +257,7 @@
                     ]
                 },
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "slowness",
@@ -303,7 +303,7 @@
                     "compare_to": 750},
     
                 "action": {
-                    "type": "apply_effect",
+                    "type": "origins:apply_effect",
                     "effects": [
                         {
                             "effect": "slowness",
