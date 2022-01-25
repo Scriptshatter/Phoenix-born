@@ -9,7 +9,9 @@
 		"pheonix:hippityhoppity",
 		"pheonix:launch",
 		"pheonix:falling_with_style",
-		"pheonix:tempstats"
+		"pheonix:tempstats",
+		"pheonix:lavasee",
+		"pheonix:dontdie"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
