@@ -7,6 +7,28 @@
             "key": "key.origins.secondary_active"
         }
     },
+    "play_sound":{
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "entity_action": {
+            
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:power_active",
+                    "power": "pheonix:firepunch_toggle"
+                },
+                "if_action":{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.firecharge.use"
+                },
+                "else_action":{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.candle.extinguish"
+                }
+        }
+    },
     "active_hud": {
         "type": "origins:resource",
         "min": 0,
@@ -22,7 +44,7 @@
             }
         }
     },
-    "invisibility": {
+    "fire_punch": {
         "type": "origins:action_on_hit",
         "condition": {
             "type": "origins:and",

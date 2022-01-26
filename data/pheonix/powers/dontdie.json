@@ -21,5 +21,16 @@
                     "permission_level": 4}
             ]
         }
+    },
+    "health_check":{
+        "type":"origins:action_on_callback",
+        "condition":{
+            "type": "origins:power_active",
+            "power": "pheonix:fromash_health_gone_check"
+        },
+        "entity_action_respawned": {
+            "type": "origins:toggle",
+            "power": "pheonix:fromash_health_gone_check"
+        }
     }
 }

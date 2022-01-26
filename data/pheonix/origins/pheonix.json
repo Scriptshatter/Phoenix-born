@@ -12,7 +12,8 @@
 		"pheonix:tempstats",
 		"pheonix:lavasee",
 		"pheonix:dontdie",
-		"pheonix:firepunch"
+		"pheonix:firepunch",
+		"pheonix:fromash"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
