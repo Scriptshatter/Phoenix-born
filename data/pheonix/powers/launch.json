@@ -7,7 +7,7 @@
       "sprite_location": "origins:textures/gui/resource_bar.png",
       "bar_index": 4
     },
-    "sound": "minecraft:entity.parrot.fly",
+    "sound": "minecraft:entity.dragon_fireball.explode",
     "speed": 2,
     "key": {
       "key": "key.origins.primary_active",

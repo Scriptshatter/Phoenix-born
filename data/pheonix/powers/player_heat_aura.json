@@ -1,0 +1,52 @@
+{
+    "type": "origins:multiple",
+    "icon": {
+        "type":"origins:resource",
+        "min":0,
+        "max":7,
+        "start_value":1,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+            "bar_index":13,
+            "condition": {
+                "type": "origins:power_active",
+                "power": "pheonix:player_heat_aura_toggle"
+            }
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "heat_up":{
+        "type": "origins:action_over_time",
+        "condition":{
+            "type":"origins:and",
+            "conditions":[{
+                "type": "origins:power_active",
+                "power": "pheonix:player_heat_aura_toggle"
+            },
+            {
+                "type": "origins:resource",
+                "resource": "pheonix:heat",
+                "comparison": ">",
+                "compare_to": 1
+            }]
+        },
+        "entity_action":{
+            "type": "origins:area_of_effect",
+            "radius": 5,
+            "bientity_action": {
+                "type": "origins:target_action",
+                "action":{
+                    "type":"origins:apply_effect",
+                    "effect": {}
+                }
+            }
+        }
+    }
+}

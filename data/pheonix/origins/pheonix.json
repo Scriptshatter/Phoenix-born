@@ -13,7 +13,8 @@
 		"pheonix:lavasee",
 		"pheonix:dontdie",
 		"pheonix:firepunch",
-		"pheonix:fromash"
+		"pheonix:fromash",
+		"pheonix:player_heat_aura"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,

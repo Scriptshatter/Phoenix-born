@@ -54,7 +54,7 @@
             {"type": "origins:resource",
                 "resource": "pheonix:heat",
                 "comparison": ">",
-                "compare_to": 25}
+                "compare_to": 50}
             ]
         },
         "bientity_action":{
