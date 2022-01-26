@@ -1,0 +1,48 @@
+{
+    "type": "origins:multiple",
+
+    "health_gone_check": {
+        "type": "origins:toggle",
+        "active_by_default": false
+    },
+    
+    "heat_check": {"type": "origins:prevent_death",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "pheonix:heat",
+        "comparison": ">",
+        "compare_to": 375
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:heal",
+                "amount": 20
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.max_health base set 10",
+                "permission_level": 4
+            }
+        ]
+    }},
+    "blaze_rod_eat": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "attribute @s minecraft:generic.max_health base set 20",
+            "permission_level": 4
+        },
+        "item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:blaze_rod"
+            }
+        }
+    }
+}
