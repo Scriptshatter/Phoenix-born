@@ -1,4 +1,6 @@
 {
     "type": "extraorigins:modify_size",
-	"scale": 0.75
+	"scale": 0.75,
+    "name":"Merged sizes",
+    "description": "When you were fused with the phoenix, your hight shrunk due to the pheonixs comparablely small size."
 }

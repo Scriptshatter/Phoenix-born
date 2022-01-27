@@ -83,6 +83,7 @@
             "permission_level": 4
     }]
         }
-    }
-    
+    },
+    "name": "burning aura",
+    "description": "by shedding excess heat around you, you can ignite nearby creatures"
 }

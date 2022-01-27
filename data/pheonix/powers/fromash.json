@@ -8,21 +8,6 @@
             "key": "key.origins.beans"
         }
     },
-    "active_hud": {
-        "type": "origins:resource",
-        "min": 0,
-        "max": 7,
-        "start_value":1,
-        "hud_render":{
-            "should_render":true,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
-            "bar_index": 0,
-            "condition": {
-                "type": "origins:power_active",
-                "power": "pheonix:fromash_health_gone_check"
-            }
-        }
-    },
     
     "heat_check": {"type": "origins:prevent_death",
     "condition": {
@@ -110,5 +95,7 @@
             }}, {"type": "origins:power_active",
                 "power": "pheonix:fromash_health_gone_check"}]
         }
-    }
+    },
+    "name": "Rise from ash",
+    "description": "Using heat, you can fuse your ash back together. however, this leaves you in a damaged state, and you must use a blaze rod to return to a healthy state."
 }

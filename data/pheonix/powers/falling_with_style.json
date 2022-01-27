@@ -1,4 +1,6 @@
 {
     "type": "origins:elytra_flight",
-    "render_elytra": true
+    "render_elytra": true,
+    "name": "Blazing wings",
+    "description": "When you fused with the phoenix, several fiery feathers appeared on your body, including wings on your back!"
 }

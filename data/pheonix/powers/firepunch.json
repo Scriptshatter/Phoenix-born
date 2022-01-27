@@ -87,6 +87,7 @@
             ]
         }
         
-    }
-
+    },
+    "name": "Inferno talons",
+    "description": "Using heat stored in your body, you can heat up your talons and items you are holding to dangerously high temperatures, doing extra damage and igniting enemys."
 }

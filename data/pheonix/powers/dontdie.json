@@ -33,5 +33,7 @@
             "condition":{"type": "origins:power_active",
                 "power": "pheonix:fromash_health_gone_check"}}]
         }
-    }
+    },
+    "name": "Home habitat",
+    "description": "The nether is the phoenixs natral habitat, and shortly after escaping the lab you instinctively found your way there."
 }

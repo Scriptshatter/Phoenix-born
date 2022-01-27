@@ -43,5 +43,7 @@
         "comparison": ">",
         "compare_to": 100
         }
-    }
+    },
+    "name": "Heated launch",
+    "description": "using the heat stored in your body, you can heat up your wings and talon like feet and legs to launch yourself up into the air!"
   }

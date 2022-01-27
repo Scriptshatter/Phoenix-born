@@ -1,5 +1,7 @@
 {
     "type": "origins:lava_vision",
     "s": 0,
-    "v": 50
+    "v": 50,
+    "name": "unhidden secrets",
+    "description": "Due to being fire birds, phoenixs have adapted their eyes in order to see in lava. When you were fused with one, this trait crossed over to you."
 }
