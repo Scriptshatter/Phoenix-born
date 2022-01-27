@@ -1,0 +1,138 @@
+{
+    "type": "origins:multiple",
+
+    "avalable_fireballs":{
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "hud_render": {
+            "should_render":true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+            "bar_index": 1
+        }
+    },
+
+
+    "fireball_charge":
+    {
+        "type": "origins:active_self",
+        "sound": {
+            "sound": "minecraft:entity.ghast.shoot"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:afireball_avalable_fireballs",
+                        "change": 1
+                    }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions":[{
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:fire_charge"
+                }
+            }}, {"type": "origins:resource",
+                "resource": "pheonix:afireball_avalable_fireballs",
+                "comparison": "<",
+                "compare_to": 7
+                }]
+        }
+    },
+
+    "afireball_launch": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:fireball",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "tag": "{ExplosionPower:2b}",
+        "key": {
+            "key": "key.origins.quaternary_active"
+        },
+        "condition":{
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type": "origins:resource",
+                    "resource": "pheonix:afireball_avalable_fireballs",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "pheonix:heat",
+                    "comparison": ">",
+                    "compare_to": 110
+                }
+            ]
+        }
+    },
+    "fireball_consume":{
+        "type": "origins:active_self",
+        "cooldown": 5,
+        "key": {
+            "key": "key.origins.quaternary_active"
+        },
+        "condition":{
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type": "origins:resource",
+                    "resource": "pheonix:afireball_avalable_fireballs",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "pheonix:heat",
+                    "comparison": ">",
+                    "compare_to": 110
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:afireball_avalable_fireballs",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:heat",
+                    "change": -110
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.ghast.shoot"
+                }
+            ]
+        }
+    }
+}

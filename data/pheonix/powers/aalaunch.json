@@ -1,6 +1,6 @@
 {
     "type": "origins:multiple",
-    "kapow":
+    "aakapow":
     {"type": "origins:launch",
     "cooldown": 100,
     "hud_render": {
@@ -36,6 +36,12 @@
         "cooldown":100,
         "hud_render":{
             "should_render":false
+        },
+        "condition":{
+            "type": "origins:resource",
+        "resource": "pheonix:heat",
+        "comparison": ">",
+        "compare_to": 100
         }
     }
   }

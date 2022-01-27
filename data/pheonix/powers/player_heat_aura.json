@@ -1,5 +1,27 @@
 {
     "type": "origins:multiple",
+    "play_sound":{
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.ternary_active"
+        },
+        "entity_action": {
+            
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:power_active",
+                    "power": "pheonix:player_heat_aura_toggle"
+                },
+                "if_action":{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.ghast.shoot"
+                },
+                "else_action":{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.candle.extinguish"
+                }
+        }
+    },
     "icon": {
         "type":"origins:resource",
         "min":0,

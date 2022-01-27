@@ -6,8 +6,9 @@
 		"pheonix:heatlink",
 		"pheonix:heat",
 		"pheonix:cold",
+		"pheonix:afireball",
 		"pheonix:hippityhoppity",
-		"pheonix:launch",
+		"pheonix:aalaunch",
 		"pheonix:falling_with_style",
 		"pheonix:tempstats",
 		"pheonix:lavasee",
@@ -20,7 +21,7 @@
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
-	"impact": 2,
+	"impact": 3,
 	"name": "Phoenixblood",
 	"description": "You are the result of an experiment, that is, a lab baby, trying to mix human and pheonix (a newly discovered nether species) blood. This experiment was somewhat successful, giving you some of the powers and limitations of a pheonix."
 }

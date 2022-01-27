@@ -89,7 +89,7 @@
                         "sound": "minecraft:block.beacon.power_select"}
             ]
         },
-        "cooldown": 1,
+        "cooldown": 5,
         "hud_render": {
             "should_render": false
         },
@@ -98,14 +98,17 @@
             "continuous": true
         },
         "condition": {
-            "type": "origins:equipped_item",
+            "type": "origins:and",
+            "conditions":
+            [{"type": "origins:equipped_item",
             "equipment_slot": "mainhand",
             "item_condition": {
                 "type": "origins:ingredient",
                 "ingredient": {
                     "item": "minecraft:blaze_rod"
                 }
-            }
+            }}, {"type": "origins:power_active",
+                "power": "pheonix:fromash_health_gone_check"}]
         }
     }
 }
