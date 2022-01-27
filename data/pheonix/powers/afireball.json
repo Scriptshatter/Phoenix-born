@@ -34,6 +34,10 @@
                         "type": "origins:change_resource",
                         "resource": "pheonix:afireball_avalable_fireballs",
                         "change": 1
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.zombie_villager.cure"
                     }
             ]
         },
