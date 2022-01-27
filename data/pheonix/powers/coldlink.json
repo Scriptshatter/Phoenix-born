@@ -568,5 +568,11 @@
     },
     "interval": 5,
     "name": "Achilles heel",
-    "description": "No matter how powerful you are, you're increadebly weak to one thing: cold."
+    "description": "No matter how powerful you are, you're increadebly weak to one thing: cold.",
+    "badges": [
+        {
+            "sprite": "minecraft:textures/block/ice.png",
+            "text": "Colder biomes will lower your temperature! look out!"
+        }
+    ]
 }

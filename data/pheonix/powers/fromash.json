@@ -5,7 +5,7 @@
         "type": "origins:toggle",
         "active_by_default": false,
         "key": {
-            "key": "key.origins.beans"
+            "key": "None. this isnt something you can toggle."
         }
     },
     
