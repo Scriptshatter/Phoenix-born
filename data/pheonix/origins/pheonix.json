@@ -15,7 +15,8 @@
 		"pheonix:firepunch",
 		"pheonix:fromash",
 		"pheonix:player_heat_aura",
-		"pheonix:torch_temp_change"
+		"pheonix:torch_temp_change",
+		"pheonix:tiny_box_tim"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
