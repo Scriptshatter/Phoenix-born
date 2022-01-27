@@ -140,7 +140,7 @@
         }
     },
     "name": "Charged fire charge",
-    "description": "By using the heat from your body, you can charge up and store fire charges with your feathers, and launch a powerful fireball at your command! as long as you have enough heat, that is.",
+    "description": "By using the heat from your body, you can charge up and store fire charges with your feathers and launch a powerful fireball at your command! as long as you have enough heat, that is.",
     "badges": [
         {
             "sprite": "origins:textures/gui/badge/info.png",
