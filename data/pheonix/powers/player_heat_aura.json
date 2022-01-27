@@ -8,7 +8,7 @@
         "hud_render": {
             "should_render": true,
             "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
-            "bar_index":13,
+            "bar_index":7,
             "condition": {
                 "type": "origins:power_active",
                 "power": "pheonix:player_heat_aura_toggle"
@@ -24,7 +24,7 @@
     },
     "heat_up":{
         "type": "origins:action_over_time",
-        "interval":20,
+        "interval":8,
         "condition":{
             "type":"origins:and",
             "conditions":[{
@@ -35,7 +35,7 @@
                 "type": "origins:resource",
                 "resource": "pheonix:heat",
                 "comparison": ">",
-                "compare_to": 5
+                "compare_to": 4
             }]
         },
         "entity_action":{
@@ -45,20 +45,22 @@
             "bientity_action": {
                 "type": "origins:target_action",
                 "action":{
-                    "type":"origins:apply_effect",
-                    "effect": {
-                        "effect": "minecraft:regeneration",
-                        "duration": 100,
-                        "amplifier": 0
-                    }
+                    "type": "origins:set_on_fire",
+                    "duration": 5
                 }
             }},
         {
             "type":"origins:change_resource",
             "resource": "pheonix:heat",
-            "change": -5
+            "change": -4
 
-        }]
+        },
+    {
+        "type": "origins:execute_command",
+            "command": "particle minecraft:flame ~ ~ ~ 2 0 2 0 1000 force @s",
+            "permission_level": 4
+    }]
         }
     }
+    
 }

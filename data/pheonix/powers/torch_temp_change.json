@@ -1,31 +1,742 @@
 {
-    "type": "action_over_time",
-    "interval": 100,
-    "entity_action":{
-        "type": "if_else_list",
-        "actions":[
-            {
-                "condition":{
-                    "type":"origins:and",
-                    "conditions":[
-                        {
-                            "type": "origins:block_in_radius",
-                            "block_condition": {
-                                "type": "origins:or",
-                                "conditions":
-                                [{"type": "origins:block",
-                                "block":"minecraft:torch"},
-                            {"type":"origins:block",
-                                "block":"minecraft:wall_torch"}]
-                            }
-                        }
-                    ]
-                },
-                "action":{
+    "type": "origins:multiple",
+    "normal_torch": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -3
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 3
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 6,
+            "block_condition": {
+                "type": "origins:or",
+                "conditions":[
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:torch"
+                    },
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:wall_torch"
+                    }
+                ]
+            }
+        }
+    },
 
+
+    "soul_torch": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 5,
+            "block_condition": {
+                "type": "origins:or",
+                "conditions":[
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:soul_torch"
+                    },
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:soul_wall_torch"
+                    }
+                ]
+            }
+        }
+    },
+
+    "campfire": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 6,
+            "block_condition": {
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:campfire"
+                    },
+                    {
+                        "type": "origins:block_state",
+                        "property": "lit",
+                        "value": true
+                    }
+                ]
+            }
+        }
+    },
+
+    "soul_campfire": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 5,
+            "block_condition": {
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:soul_campfire"
+                    },
+                    {
+                        "type": "origins:block_state",
+                        "property": "lit",
+                        "value": true
+                    }
+                ]
+            }
+        }
+    },
+
+    "jack_o_lantern": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -2
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 2
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 5,
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:jack_o_lantern"
+            }
+        }
+    },
+
+    "candle": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 4,
+            "block_condition": {
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "minecraft:candles"
+                    },
+                    {
+                        "type": "origins:block_state",
+                        "property": "lit",
+                        "value": true
+                    }
+                ]
+            }
+        }
+    },
+    
+    "fire": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 6,
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:fire"
+            }
+        }
+    },
+
+    "soul_fire": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 5,
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:soul_fire"
+            }
+        }
+    },
+
+    "fire_res": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "==",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": 1
+            }
+        },
+        "condition":{
+            "type": "origins:status_effect",
+            "effect": "minecraft:fire_resistance"
+        }
+    },
+
+
+    "stray": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "==",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type":"origins:area_of_effect",
+                "radius": 10,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": -1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:stray"
+                    }
+                }
+            },
+            "else_action":{
+                "type":"origins:area_of_effect",
+                "radius": 10,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": 1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:stray"
+                    }
                 }
             }
-        ]
-    }
+        }
+    },
 
+
+    "blaze": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type":"origins:area_of_effect",
+                "radius": 10,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:blaze"
+                    }
+                }
+            },
+            "else_action":{
+                "type":"origins:area_of_effect",
+                "radius": 10,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:blaze"
+                    }
+                }
+            }
+        }
+    },
+
+
+    "magma_cube": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type":"origins:area_of_effect",
+                "radius": 12,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:magma_cube"
+                    }
+                }
+            },
+            "else_action":{
+                "type":"origins:area_of_effect",
+                "radius": 12,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:magma_cube"
+                    }
+                }
+            }
+        }
+    },
+
+
+    "lava": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:cold",
+                "change": -1
+            },
+            "else_action":{
+                "type": "origins:change_resource",
+                "resource": "pheonix:heat",
+                "change": 2
+            }
+        },
+        "condition":{
+            "type":"origins:block_in_radius",
+            "radius": 6,
+            "block_condition": {
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:block",
+                        "block": "minecraft:lava"
+                    },
+                    {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:still"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    
+    "entity_on_fire": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action":{
+            "type": "origins:if_else",
+            "condition":{
+                "type": "origins:and",
+                "conditions":[
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:heat",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "pheonix:cold",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "if_action":{
+                "type":"origins:area_of_effect",
+                "radius": 3,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:on_fire"
+                    }
+                }
+            },
+            "else_action":{
+                "type":"origins:area_of_effect",
+                "radius": 3,
+                "bientity_action":{
+                    "type": "origins:actor_action",
+                    "action":{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 1
+                    }
+                },
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:on_fire"
+                    }
+                }
+            }
+        }
+    }
 }

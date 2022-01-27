@@ -14,7 +14,8 @@
 		"pheonix:dontdie",
 		"pheonix:firepunch",
 		"pheonix:fromash",
-		"pheonix:player_heat_aura"
+		"pheonix:player_heat_aura",
+		"pheonix:torch_temp_change"
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
