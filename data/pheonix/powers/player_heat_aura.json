@@ -14,11 +14,11 @@
                 },
                 "if_action":{
                     "type": "origins:play_sound",
-                    "sound": "minecraft:entity.ghast.shoot"
+                    "sound": "minecraft:block.candle.extinguish"
                 },
                 "else_action":{
                     "type": "origins:play_sound",
-                    "sound": "minecraft:block.candle.extinguish"
+                    "sound": "minecraft:entity.ghast.shoot"
                 }
         }
     },

@@ -2,7 +2,7 @@
     "type": "origins:multiple",
     "nether_spawn":
     {"type": "origins:modify_player_spawn",
-    "dimension": "minecraft:the_nether"},
+    "biome": "minecraft:the_nether"},
     "nobar":{
         "type": "origins:action_on_callback",
         "entity_action_respawned": {
@@ -35,5 +35,5 @@
         }
     },
     "name": "Home habitat",
-    "description": "The nether is the phoenixs natral habitat, and shortly after escaping the lab you instinctively found your way there."
+    "description": "The nether is the phoenixes natural habitat, and shortly after escaping the lab you instinctively found your way there."
 }
