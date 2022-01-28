@@ -74,9 +74,12 @@
                         "sound": "minecraft:block.beacon.power_select"}
             ]
         },
-        "cooldown": 5,
+        "cooldown": 12000,
         "hud_render": {
-            "should_render": false
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 5,
+            "inverted": true
         },
         "key": {
             "key": "key.use",
