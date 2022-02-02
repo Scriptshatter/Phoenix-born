@@ -17,6 +17,10 @@
         "resource": "pheonix:heat",
         "comparison": ">",
         "compare_to": 375},
+        {"type": "origins:resource",
+            "resource": "pheonix:fromash_cooldown",
+            "comparison": "==",
+            "compare_to": 0},
         {
             "type": "origins:power_active",
             "power": "pheonix:fromash_health_gone_check",
@@ -47,6 +51,10 @@
                 "type": "origins:change_resource",
                 "resource": "pheonix:heat",
                 "change": -375
+            },
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "pheonix:fromash_cooldown"
             }
         ]
     }},
@@ -74,12 +82,9 @@
                         "sound": "minecraft:block.beacon.power_select"}
             ]
         },
-        "cooldown": 12000,
+        "cooldown": 5,
         "hud_render": {
-            "should_render": true,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
-            "bar_index": 5,
-            "inverted": true
+            "should_render": false
         },
         "key": {
             "key": "key.use",
@@ -99,6 +104,22 @@
                 "power": "pheonix:fromash_health_gone_check"}]
         }
     },
+
+    "cooldown":{
+        "type": "origins:cooldown",
+        "cooldown": 12000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 4
+        }
+    },
     "name": "Rise from ash",
-    "description": "Using heat, you can fuse your ash back together. however, this leaves you in a damaged state, and you must use a blaze rod to return to a healthy state."
+    "description": "Using heat, you can fuse your ash back together. however, this leaves you in a damaged state, and you must use a blaze rod to return to a healthy state.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Whenever you revive yourself, there is a 10 minute cooldown between when you can come back to life."
+        }
+    ]
 }

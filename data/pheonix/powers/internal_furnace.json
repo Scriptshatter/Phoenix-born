@@ -1,0 +1,295 @@
+{
+    "type": "origins:multiple",
+    "blaze_powder":
+        {"type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.firecharge.use"
+                },
+                {
+                    "type": "origins:if_else",
+                "condition":{
+                    "type": "origins:and",
+                    "conditions":[
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:heat",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": ">=",
+                            "compare_to": 25
+                        }
+                    ]
+                },
+                "if_action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:cold",
+                    "change": -50
+                },
+                "else_action":{
+                    "type": "origins:and",
+                    "actions":
+                    [{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 50
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -25
+                    }]
+                }
+
+                }
+            ]
+        },
+
+        "cooldown": 5,
+
+        "hud_render": {
+            "should_render": false
+        },
+
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+
+        "condition": {
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions":
+                        [{"type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:blaze_powder"
+                        }},{"type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "minecraft:magma_cream"
+                            }}]
+                    }
+                }
+            ]
+        }},
+
+        "coal":
+        {"type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.firecharge.use"
+                },
+                {
+                    "type": "origins:if_else",
+                "condition":{
+                    "type": "origins:and",
+                    "conditions":[
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:heat",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": ">=",
+                            "compare_to": 15
+                        }
+                    ]
+                },
+                "if_action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:cold",
+                    "change": -30
+                },
+                "else_action":{
+                    "type": "origins:and",
+                    "actions":
+                    [{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 30
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -15
+                    }]
+                }
+
+                }
+            ]
+        },
+
+        "cooldown": 5,
+
+        "hud_render": {
+            "should_render": false
+        },
+
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+
+        "condition": {
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions":
+                        [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": 
+                                {
+                                    "item": "minecraft:coal"
+                                }
+                            },
+
+                    {"type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:charcoal"
+                        }}]
+                    }
+                }
+            ]
+        }},
+
+        "ect":
+        {"type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.firecharge.use"
+                },
+                {
+                    "type": "origins:if_else",
+                "condition":{
+                    "type": "origins:and",
+                    "conditions":[
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:heat",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "pheonix:cold",
+                            "comparison": ">=",
+                            "compare_to": 15
+                        }
+                    ]
+                },
+                "if_action":{
+                    "type": "origins:change_resource",
+                    "resource": "pheonix:cold",
+                    "change": -10
+                },
+                "else_action":{
+                    "type": "origins:and",
+                    "actions":
+                    [{
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:heat",
+                        "change": 10
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "pheonix:cold",
+                        "change": -5
+                    }]
+                }
+
+                }
+            ]
+        },
+
+        "cooldown": 5,
+
+        "hud_render": {
+            "should_render": false
+        },
+
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+
+        "condition": {
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions":
+                        [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": 
+                                {
+                                    "item": "minecraft:stick"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }},
+
+        "name": "Internal Furnace",
+        "description": "You can use some items as fuel, warming you up and (hopefully) preventing death.",
+        "badges": [
+            {
+                "sprite": "origins:textures/gui/badge/info.png",
+                "text": "These items include coal/charcoal, sticks, blaze powder, and magma cream."
+            }
+        ]
+}

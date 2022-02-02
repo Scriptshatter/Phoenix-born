@@ -352,5 +352,12 @@
         ]
     },
     "interval": 20,
-    "hidden": true
+    "name": "Achilles heel",
+    "description": "No matter how powerful you are, you're incredibly weak to one thing: cold.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Colder biomes will lower your temperature! look out!"
+        }
+    ]
 }

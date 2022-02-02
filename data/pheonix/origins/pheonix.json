@@ -17,11 +17,13 @@
 		"pheonix:fromash",
 		"pheonix:player_heat_aura",
 		"pheonix:torch_temp_change",
-		"pheonix:tiny_box_tim"
+		"pheonix:tiny_box_tim",
+		"pheonix:internal_furnace"
+		
 	],
 	"icon": "minecraft:fire_charge",
 	"order": 0,
 	"impact": 3,
 	"name": "Phoenix-born",
-	"description": "After the discovery of a new nether species, the phoenix, scientists saw the shocking similarities between phoenix DNA and human DNA, and decided to experiment, creating you, a part phoenix part human hybrid."
+	"description": "After the discovery of a new species, the phoenix, scientists saw the shocking similarities between phoenix DNA and human DNA, and decided to experiment, creating you, a part phoenix part human hybrid."
 }
