@@ -73,7 +73,7 @@
                 "action":{
                     "type": "origins:change_resource",
                     "resource": "pheonix:heat",
-                    "change": -20
+                    "change": -35
                 }
             },
             {

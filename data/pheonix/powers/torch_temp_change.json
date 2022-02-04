@@ -816,6 +816,7 @@
             "invert": true
         }
     },
+    
     "day": {
         "type": "origins:action_over_time",
         "interval": 20,
